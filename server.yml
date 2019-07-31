@@ -18,3 +18,4 @@
     get_url:
       url: https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
       dest: "{{spigot_dir}}/BuildTools.jar"
+      force: no
