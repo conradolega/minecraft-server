@@ -5,6 +5,12 @@
   roles:
     - role: geerlingguy.java
 
+- name: Install .Net Core
+  hosts: "{{hosts}}"
+  become: yes
+  roles:
+    - role: ocha.dotnet-core
+
 - name: Set up Spigot server
   hosts: "{{hosts}}"
   become: yes
