@@ -1,0 +1,2 @@
+anvil-parser==0.1.0
+NBT==1.5.0
