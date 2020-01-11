@@ -5,17 +5,17 @@
   roles:
     - role: geerlingguy.java
 
-- name: Set up Spigot server
+- name: Set up Paper server
   hosts: "{{hosts}}"
   become: yes
   tasks:
-  - name: Create Spigot directory
+  - name: Create Paper directory
     file:
-      path: "{{spigot_dir}}"
+      path: "{{paper_dir}}"
       state: directory
 
-  - name: Download BuildTools
+  - name: Download Paper
     get_url:
-      url: https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
-      dest: "{{spigot_dir}}/BuildTools.jar"
+      url: https://papermc.io/api/v1/paper/1.15.1/42/download
+      dest: "{{paper_dir}}/paper.jar"
       force: no
